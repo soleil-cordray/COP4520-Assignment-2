@@ -6,10 +6,10 @@
 
 std::mutex mtx;               // synchronization
 std::condition_variable cond; // signaling
+std::vector<bool> hasEaten;   // track whether non-leader guests eaten
 bool cupcake = true;          // cupcake availability
-int nGuests;
-std::vector<bool> hasEaten; // track whether non-leader guests eaten
-int leaderCount = 0;
+int leaderCount = 0;          // num leader-eaten cupcakes
+int nGuests;                  // total guests
 
 void enterLabyrinth(int id, bool isLeader)
 {
@@ -57,7 +57,7 @@ int main()
     std::cout << "Enter the total number of guests: ";
     std::cin >> nGuests;
 
-    if (nGuests <= 0)
+    if (nGuests < 1)
     {
         std::cout << "Invalid number of guests." << std::endl;
         return 0;

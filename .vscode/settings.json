@@ -73,6 +73,7 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "stop_token": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "unordered_set": "cpp"
     }
 }
