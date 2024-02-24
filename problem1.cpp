@@ -73,9 +73,9 @@ int main()
 
     // make thread for each guest; leader = last guest
     std::vector<std::thread> guests;
-    for (int i = 0; i < nGuests; i++)
+    for (int i = 1; i <= nGuests; i++)
     {
-        guests.push_back(std::thread(enterLabyrinth, i, i == (nGuests - 1)));
+        guests.emplace_back(std::thread(enterLabyrinth, i, i == (nGuests - 1)));
     }
 
     // wait for all threads to complete
