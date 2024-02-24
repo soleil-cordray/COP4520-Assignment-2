@@ -18,7 +18,7 @@ void visitShowroom(int id) {
     std::cout << "Guest " << id << " is visiting the showroom." << std::endl;
 
     // simulate visit duration
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    std::this_thread::sleep_for(std::chrono::seconds(1));
 
     std::cout << "Guest " << id << " has left the showroom." << std::endl;
 
@@ -53,7 +53,7 @@ int main()
         guest.join();
     }
 
-    std::cout << "All guests have visited the showroom!" << std::endl;
+    std::cout << "All " << nGuests << " guests have visited the showroom!" << std::endl;
 
     return 0;
 }
