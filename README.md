@@ -84,7 +84,7 @@ The provided C++ program simulates this protocol using threads to represent gues
 
 ### Demo
 
-![Demo Animation](problem1-demo.gif)
+![Demo Animation](demo/problem1-demo.gif)
 
 ### Run
 
@@ -143,7 +143,7 @@ Note that the program pauses for 1 second during each guest visit to simulate th
 
 ### Demo 
 
-![Demo Animation](problem2-demo.gif)
+![Demo Animation](demo/problem2-demo.gif)
 
 ### Run
 
